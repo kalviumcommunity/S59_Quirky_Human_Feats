@@ -6,6 +6,10 @@ app.get("/ping" , (req, res)=>{
     res.send("pong");
 })
 
+app.get("/" , (req, res)=>{
+    res.send("Server is running successfully!!");
+})
+
 const port=process.env.PORT || 3000;
 app.listen(port,(error) => {
     if (error) {
