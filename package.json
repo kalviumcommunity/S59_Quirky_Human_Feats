@@ -1,13 +1,13 @@
 {
   "name": "s59_quirky_human_feats",
   "version": "1.0.0",
-  "description": "",
+  "description": "'Step into our silly world where we showcase the most unusual human talents and skills! From bizarre body quirks to record-breaking stunts, get ready to be entertained by the wackiest feats you've ever seen. Join us for a fun-filled journey celebrating the wonderfully weird side of human abilities!'",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Manmeet Singh",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
