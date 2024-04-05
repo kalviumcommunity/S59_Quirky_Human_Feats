@@ -17,3 +17,8 @@ Features:
 4. Quirky Trivia and Fun Facts: Test your knowledge with interactive quizzes and trivia about the weirdest feats ever accomplished by humankind.
 
 5. Community Corner: Connect with fellow enthusiasts, share your own quirky talents, and revel in the joy of celebrating the wonderfully weird side of being human.
+
+
+
+
+Deployed Link:  https://s59-quirky-human-feats.onrender.com/
