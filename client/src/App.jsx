@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './Components/Home';
+import CategoryList from './Components/CategoryList';
 
 const App = () => {
   return (

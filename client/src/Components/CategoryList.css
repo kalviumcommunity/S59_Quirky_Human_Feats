@@ -1,0 +1,36 @@
+@import './Common.css';
+.category-list {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .category-item {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px;
+    width: 80%;
+    text-align: left;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .category-item:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+  }
+  
+  
+  .category-item h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .category-item p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
