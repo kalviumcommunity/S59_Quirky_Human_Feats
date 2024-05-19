@@ -2,35 +2,34 @@
 .category-list {
     width: 80%;
     margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1.2em;
+    margin-bottom: 20px;
   }
   
   .category-item {
     border: 1px solid #ccc;
     padding: 16px;
-    margin: 8px;
-    width: 80%;
+    margin: 8px 0;
+    width: 100%;
     text-align: left;
-    background-color: #f9f9f9;
+    background-color: var(--background-color-light);
     transition: background-color 0.3s, border-color 0.3s;
   }
   
   .category-item:hover {
-    background-color: #e0e0e0;
-    border-color: #bbb;
+    background-color: var(--background-color-hover);
+    border-color: var(--border-color-hover);
   }
   
-  
   .category-item h2 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #333;
+    margin-bottom: 10px;
   }
   
   .category-item p {
     margin: 5px 0;
-    color: #555;
   }
   
