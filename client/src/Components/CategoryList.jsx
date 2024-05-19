@@ -16,7 +16,9 @@ const CategoryList = () => {
           throw new Error('Failed to fetch data');
         }
         const data = await response.json();
+
         console.log(data);
+
         setCategories(data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -53,7 +55,9 @@ const CategoryList = () => {
     <div className="category-list">
       {error && <div className="error-message">{error}</div>}
       {categories && categories.cases.map(category => (
+
         <div key={category._id} className="category-item">
+
           <h2>{category.Category}</h2>
           <p>Name: {category.Name}</p>
           <p>Quirk: {category.Quirk}</p>
