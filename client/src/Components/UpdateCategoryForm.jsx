@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import './QuirksPage.css'; 
 
-const AddCategoryForm = ({ onAdd }) => {
+const UpdateCategoryForm = ({ category, onUpdate }) => {
   const [formData, setFormData] = useState({
-    Category: '',
-    Name: '',
-    Quirk: '',
-    Level: ''
+    Category: category.Category,
+    Name: category.Name,
+    Quirk: category.Quirk,
+    Level: category.Level,
   });
 
   const handleChange = (e) => {
@@ -14,26 +13,9 @@ const AddCategoryForm = ({ onAdd }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:8080/category/add-Category', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-      if (response.ok) {
-        const newCategory = await response.json();
-        onAdd(newCategory);
-        setFormData({ Category: '', Name: '', Quirk: '', Level: '' });
-      } else {
-        console.error("Failed to add category");
-      }
-    } catch (error) {
-      console.error("Error adding category:", error);
-    }
+    onUpdate({ ...category, ...formData });
   };
 
   return (
@@ -78,9 +60,9 @@ const AddCategoryForm = ({ onAdd }) => {
           required
         />
       </div>
-      <button type="submit">Add Category</button>
+      <button type="submit">Update Category</button>
     </form>
   );
 };
 
-export default AddCategoryForm;
+export default UpdateCategoryForm;
