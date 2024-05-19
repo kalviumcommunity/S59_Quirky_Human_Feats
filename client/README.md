@@ -1,8 +1,28 @@
-# React + Vite
+# S59_Quirky_Human_Feats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Title: Quirky Human Feats
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Idea:
+Quirky Human Feats is your gateway to a world of delightful absurdity and extraordinary talents. Embark on a journey through the quirkiest, most outlandish displays of human skill and ingenuity, where the line between the ordinary and the extraordinary is joyously blurred.
+
+Features:
+
+1. Showcase of Unusual Talents: Explore a curated collection of the most peculiar and entertaining human abilities, from jaw-dropping contortions to mind-boggling memory feats.
+
+2. Laugh-Out-Loud Record-Breaking Stunts: Giggle your way through the zaniest Guinness World Records and off-the-wall stunts that defy logic and expectation.
+
+3. Oddities of the Human Form: Delve into the fascinating world of strange physical attributes and quirks that make each individual wonderfully unique.
+
+4. Quirky Trivia and Fun Facts: Test your knowledge with interactive quizzes and trivia about the weirdest feats ever accomplished by humankind.
+
+5. Community Corner: Connect with fellow enthusiasts, share your own quirky talents, and revel in the joy of celebrating the wonderfully weird side of being human.
+
+
+
+
+Deployed Link:  https://s59-quirky-human-feats.onrender.com/
+
+Deployed link(CloudFare): https://quirkyhumanfeats2.pages.dev/
+
+ 
