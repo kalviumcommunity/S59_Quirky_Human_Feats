@@ -5,38 +5,23 @@ const CategoryList = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    // Replace the data fetching logic with dummy data
-    const dummyData = [
-      {
-        _id: '1',
-        Category: 'Quirky Feats',
-        Name: 'John Doe',
-        Quirk: 'Juggling Fire',
-        Level: 'Expert'
-      },
-      {
-        _id: '2',
-        Category: 'Quirky Feats',
-        Name: 'Jane Smith',
-        Quirk: 'Walking Backwards',
-        Level: 'Intermediate'
-      },
-      {
-        _id: '3',
-        Category: 'Quirky Feats',
-        Name: 'Sam Wilson',
-        Quirk: 'Talking with Animals',
-        Level: 'Beginner'
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/');
+        const data = await response.json();
+        setCategories(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
-    ];
+    };
 
-    setCategories(dummyData);
+    fetchCategories();
   }, []);
 
   return (
     <div className="category-list">
       {categories.map(category => (
-        <div key={`${category._id}-${category.Name}`} className="category-item">
+        <div key={category._id} className="category-item">
           <h2>{category.Category}</h2>
           <p>Name: {category.Name}</p>
           <p>Quirk: {category.Quirk}</p>
