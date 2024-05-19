@@ -1,3 +1,4 @@
+@import './Common.css';
 .home-page {
     display: flex;
     flex-direction: column;
@@ -6,6 +7,13 @@
     height: 100vh;
     text-align: center;
   }
+
+  .top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
   
   .centered-content {
     margin-bottom: 20px;
@@ -48,5 +56,38 @@
   .category-item p {
     margin: 5px 0;
     color: #555;
+  }
+  .my-quirks-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .my-quirks-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .centered-content {
+    text-align: center;
+  }
+  
+  .enter-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .enter-button:hover {
+    background-color: #cc00cc;
   }
   

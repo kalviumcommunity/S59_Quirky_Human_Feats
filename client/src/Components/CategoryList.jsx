@@ -36,7 +36,7 @@ const CategoryList = () => {
   return (
     <div className="category-list">
       {categories.map(category => (
-        <div key={category._id} className="category-item">
+        <div key={`${category._id}-${category.Name}`} className="category-item">
           <h2>{category.Category}</h2>
           <p>Name: {category.Name}</p>
           <p>Quirk: {category.Quirk}</p>

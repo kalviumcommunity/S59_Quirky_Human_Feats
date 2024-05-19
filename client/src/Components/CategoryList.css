@@ -1,3 +1,4 @@
+@import './Common.css';
 .category-list {
     width: 80%;
     margin: 20px auto;
@@ -7,14 +8,20 @@
   }
   
   .category-item {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px;
+    width: 80%;
+    text-align: left;
     background-color: #f9f9f9;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s;
   }
+  
+  .category-item:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+  }
+  
   
   .category-item h2 {
     margin: 0;

@@ -1,0 +1,24 @@
+.centered-width-80 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .centered-content {
+    text-align: center;
+  }
+  
+  .enter-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .enter-button:hover {
+    background-color: #cc00cc;
+  }
+  
