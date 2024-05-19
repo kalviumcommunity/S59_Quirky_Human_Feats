@@ -4,7 +4,11 @@ import './Home.css';
 import CategoryList from './CategoryList';
 import QuirksPage from './QuirksPage';
 
-const Home = () => {
+// import EntityList from './EntityList'; 
+import UpdateList from './UpdateCategoryForm';
+
+const Home = ({ entities, onDelete }) => { 
+
   return (
     <Router>
       <div className="home-page">
@@ -22,6 +26,11 @@ const Home = () => {
         <Routes>
           <Route path="/categories" element={<CategoryList />} />
           <Route path="/quirks" element={<QuirksPage />} />
+
+          {/* Render EntityList with entities and onDelete as props */}
+          {/* <Route path="/" element={<EntityList entities={entities} onDelete={onDelete} />} /> */}
+          <Route path="/update" element={<UpdateList />} />
+
         </Routes>
       </div>
     </Router>
