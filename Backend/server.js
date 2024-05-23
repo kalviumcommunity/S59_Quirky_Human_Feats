@@ -1,23 +1,23 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const connectDB = require('./dbconn');
-const router = require('./Route');
-
+const router = require('./Routes/Route.js');
 
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get("/ping", (req, res) => {
     res.send("pong");
 });
-app.use('/',router)
 
-const port =  8080 || process.env.PORT;
+app.use('/category', router);
 
+const port = 8080 || process.env.PORT;
 
 connectDB()
     .then(() => {

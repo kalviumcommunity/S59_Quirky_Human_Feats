@@ -22,3 +22,5 @@ Features:
 
 
 Deployed Link:  https://s59-quirky-human-feats.onrender.com/
+
+Deployed Link(CloudFare): https://quirkyhumanfeats2.pages.dev/

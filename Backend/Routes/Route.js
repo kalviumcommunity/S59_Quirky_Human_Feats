@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const Category = require('./Schema.js');
+const Category = require('../Schema.js');
+const { validateData } = require('../joivalidation.js');
 
-
-router.get('/', async (req, res) => {
+router.get('/categories', async (req, res) => {
     try {
         const cases = await Category.find();
-        res.json(cases);
+        res.json({ cases });
     } catch (err) {
         res.status(500).json({ error: "Error occurred while fetching data" });
     }
@@ -25,12 +25,12 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/add-Category', async (req, res) => {
-    const newCategory = new Category({
-        Category: req.body.Category,
-        Quirk: req.body.Quirk,
-        Name: req.body.Name,
-        Level: req.body.Level
-    });
+    const { error, value } = validateData(req.body);
+    if (error) {
+        return res.status(400).json({ error: "Validation Error", details: error });
+    }
+
+    const newCategory = new Category(value);
     try {
         const savedCategory = await newCategory.save();
         res.status(201).json(savedCategory);
@@ -40,8 +40,13 @@ router.post('/add-Category', async (req, res) => {
 });
 
 router.patch('/:id', async (req, res) => {
+    const { error, value } = validateData(req.body);
+    if (error) {
+        return res.status(400).json({ error: "Validation Error", details: error });
+    }
+
     try {
-        const updatedCategory = await Category.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        const updatedCategory = await Category.findByIdAndUpdate(req.params.id, value, { new: true });
         if (!updatedCategory) {
             return res.status(404).json({ error: "Category not found" });
         }
