@@ -20,8 +20,10 @@ const CategoryList = () => {
           throw new Error('Failed to fetch data');
         }
         const data = await response.json();
+
         setCategories(data.cases);
         setFilteredCategories(data.cases);
+
       } catch (error) {
         setError("Failed to fetch data. Please try again later.");
       }
@@ -111,6 +113,7 @@ const CategoryList = () => {
   return (
     <div className="category-list">
       {error && <div className="error-message">{error}</div>}
+
       <div>
         <label>Select User:</label>
         <select value={selectedUser} onChange={handleUserChange}>
@@ -126,7 +129,9 @@ const CategoryList = () => {
         <button onClick={handleFilterClick}>Filter</button>
       </div>
       {filteredCategories.map(category => (
+
         <div key={category._id} className="category-item">
+
           <h2>{category.Category}</h2>
           <p>Name: {category.Name}</p>
           <p>Quirk: {category.Quirk}</p>

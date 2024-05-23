@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import './QuirksPage.css'; 
+
 
 const AddCategoryForm = ({ onAdd }) => {
   const [formData, setFormData] = useState({
