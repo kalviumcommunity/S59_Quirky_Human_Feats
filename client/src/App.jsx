@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Home from './Components/Home';
 import Auth from './Components/Auth';
+import CategoryList from './Components/CategoryList';
 import './App.css'; 
 import axios from 'axios';
 
@@ -27,7 +27,7 @@ const App = () => {
     <div className="app">
       {isLoggedIn ? (
         <div>
-          <Home />
+          <CategoryList />
           <button onClick={handleLogout} className="logout-button">Logout</button>
         </div>
       ) : (
