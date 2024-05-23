@@ -20,6 +20,8 @@ const Auth = ({ onLogin, onLogout, isLoggedIn }) => {
         setPassword('');
       }
       console.log(response);
+      document.cookie = `token=${response.data.token}; path=/;`;
+
       // success 
     } catch (error) {
       setError(error.response.data.error);
